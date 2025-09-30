@@ -78,11 +78,98 @@
 # print(reversed_statment)
 
 # Method II
-def reversed_sentence():
-    statement = input("Enter a sentence: ")
-    words = statement.split()
-    reversed_words = ' '.join(reversed(words))
-    print(f"The reversed statement is:", reversed_words)
 
 
-reversed_sentence()
+# def reversed_sentence():
+#     statement = input("Enter a sentence: ")
+#     words = statement.split()
+#     reversed_words = ' '.join(reversed(words))
+#     print(f"The reversed statement is:", reversed_words)
+
+
+# reversed_sentence()
+
+# py -m venv venv - creat a virtual env
+# venv\Scripts\activate - to activate the virtual env
+
+# Write a python program that takes a URL and generate a QR code for the given url and save QR code in a file
+
+# import qrcode
+
+
+# data = input('Enter your URL: ')
+# filename = input('Enter your preferred filename: ')
+# qr = qrcode.QRCode(box_size=10, border=4)
+# qr.add_data(data)
+# image = qr.make_image(fill_color='black', back_color='white')
+
+# image.save(filename)
+# print(f"QR Code saved as {filename}")
+
+##############################################
+# Guess game
+# Write a program to have the computer randomly select a number between 1 and
+# 10, and then prompt the player to guess the number. The program should give
+# hints if the guess is too high or too low.
+
+import random
+
+
+# def guess_the_number():
+#     """
+#     A number guessing game where the computer selects a number
+#     and the user tries to guess it with hints.
+#     """
+#     # Generate a random number between 1 and 10
+#     secret_number = random.randint(1, 10)
+
+#     print("Welcome to the guessing game!")
+#     print("I have selected a number between 1 and 10.")
+#     print("Try to guess what it is.")
+
+#     while True:
+#         try:
+#             # Prompt the user for their guess
+#             guess = int(input("Enter your guess: "))
+
+#             # Check if the guess is correct
+#             if guess == secret_number:
+#                 print(
+#                     f"Congratulations! You guessed it. The number was {secret_number}.")
+#                 break  # Exit the loop and end the game
+#             elif guess < secret_number:
+#                 print("Too low! Try a higher number.")
+#             else:
+#                 print("Too high! Try a lower number.")
+#         except ValueError:
+#             # Handle cases where the user enters non-integer input
+#             print("Invalid input. Please enter a whole number.")
+
+
+# # Start the game
+# if __name__ == "__main__":
+#     guess_the_number()
+
+import random
+
+
+def guess_the_number():
+
+    guessed_number = random.randint(1, 10)
+
+    while True:
+        try:
+            guess = int(input("Enter a number: "))
+            if guess == guessed_number:
+                print(f"Congratulations! You are correct. {guessed_number}")
+                break
+            elif guess < guessed_number:
+                print("Wrong! Try again.")
+            else:
+                print("You can do better")
+        except ValueError:
+            print("Invalid Input. Please enter a whole number.")
+
+
+if __name__ == "__main__":
+    guess_the_number()
