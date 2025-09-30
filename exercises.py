@@ -47,18 +47,42 @@
 #     roll_dice_game()
 
 #######################################
-import random
+# import random
 
-while True:
+# while True:
 
-    user_input = input('Do you want to the roll the dice? (yes/no): ')
+#     user_input = input(
+#         'Do you want to the roll the dice? (yes/no): ').lower().strip()
 
-    if user_input == 'yes':
-        dice1 = random.randint(1, 6)
-        dice2 = random.randint(1, 6)
-        print(f"{dice1} and {dice2}")
-    elif user_input == 'no':
-        print('You are not interested!')
-        break
-    else:
-        print('Invalid choice')
+#     if user_input == 'yes':
+#         dice1 = random.randint(1, 6)
+#         dice2 = random.randint(1, 6)
+#         print(f"{dice1} and {dice2}")
+#     elif user_input == 'no':
+#         print('You are not interested!')
+#         break
+#     else:
+#         print('Invalid choice')
+
+##########################################
+# Reversed A String
+# user_input = input('Enter anything please: ')
+# reversed_input = user_input[::-1]
+# print("Reversed Input is:", reversed_input)
+
+# Reversed a group of words - Method I
+# statement = 'Python is a powerful programming language'
+# words = statement.split()
+# reversed_words = words[::-1]
+# reversed_statment = " ".join(reversed_words)
+# print(reversed_statment)
+
+# Method II
+def reversed_sentence():
+    statement = input("Enter a sentence: ")
+    words = statement.split()
+    reversed_words = ' '.join(reversed(words))
+    print(f"The reversed statement is:", reversed_words)
+
+
+reversed_sentence()
